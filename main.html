@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speech to Sign Language</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Speech to Sign Language Translator</h1>
+        </header>
+
+        <section class="content">
+            <button id="start-btn" class="btn">Start Speaking</button>
+            <p id="instruction">Please click the button and say something!</p>
+            <p id="recognized-text">Recognized Text: <span id="text-output"></span></p>
+
+            <div id="video-container">
+                <video id="sign-video" controls>
+                    <source id="video-source" src="" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 Speech to Sign Language Translator</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
